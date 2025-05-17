@@ -113,7 +113,7 @@ def create_resume(links, link_system_prompt):
     return result
 
 
-# ------------------------------------ Main Loop ---------------------------------- 
+# ------------------------------------ Extracting GitHub Project URLs ---------------------------------- 
 url = "https://github.com/david125tran?tab=repositories"
 
 # Create a Website object
@@ -146,10 +146,13 @@ print("AI Response:")
 print("Links found on the webpage:")
 print(ai_response)
 
+# ------------------------------------ Save the URLs in JSON ---------------------------------- 
 # Save the response to a JSON file
 with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\links.json", "w") as f:
     json.dump(ai_response, f, indent=4)
 
+
+# ------------------------------------ Creating the AI Generated Resume in Markdown ---------------------------------- 
 link_system_prompt = """
 You are provided with a list of links of my relevant projects from my Github page where I have 
 a portfolio of my projects in JSON format stored in a string.
