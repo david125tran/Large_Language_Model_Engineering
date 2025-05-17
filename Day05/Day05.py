@@ -91,9 +91,9 @@ def get_links(url, link_system_prompt):
     result = response.choices[0].message.content
     return json.loads(result)
 
-def create_resume(links, link_system_prompt):
+def create_portfolio(links, link_system_prompt):
     """
-    Create a detailed markdown resume for the user with the links provided to showcase
+    Create a detailed markdown portfolio for the user with the links provided to showcase
     their projects to show to a potential employer.  Write a biography showcasing
     what skills that the user has and what they can do using an API call to the OpenAI API
     platform ('gpt-4o-mini' model).  The response should be in markdown format.
@@ -127,7 +127,7 @@ website = Website(url)
 link_system_prompt = """
 You are provided with a list of links found on my Github page where I have a 
 portfolio of my projects. Decide which of the links would be most relevant to 
-include in a resume detailing my projects to show to a potential employer. You 
+include in a portfolio detailing my projects to show to a potential employer. You 
 should only include links that are relevant projects.  Don't include any links 
 that are not relevant to my projects.
 
@@ -152,7 +152,7 @@ with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\links.json", "w") as f:
     json.dump(ai_response, f, indent=4)
 
 
-# ------------------------------------ Creating the AI Generated Resume in Markdown ---------------------------------- 
+# ------------------------------------ Creating the AI Generated Porfolio in Markdown ---------------------------------- 
 link_system_prompt = """
 You are provided with a list of links of my relevant projects from my Github page where I have 
 a portfolio of my projects in JSON format stored in a string.
@@ -164,20 +164,20 @@ Example:
     ]
 }
 
-Create a detailed markdown resume for me with the links provided to showcase my
+Create a detailed markdown portfolo for me with the links provided to showcase my
 projects to show to a potential employer.  Write me a biography showcasing what skills
 that I have and what I can do.  Make sure to include the links in the markdown
-resume.  Make sure to include the links in the markdown resume.  Add some emojis to
-the markdown resume to make it more visually appealing. 
+portfolio.  Make sure to include the links in the markdown portfolio.  Add some emojis to
+the markdown portfolio to make it more visually appealing. 
 """
 
-markdown_response = create_resume(ai_response, link_system_prompt)
+markdown_response = create_portfolio(ai_response, link_system_prompt)
 
 # Save the response to a markdown file with enconding set to utf-8 
 # to avoid any encoding issues from emojis in the markdown file
-with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\AI generated resume.md", "w", encoding="utf-8") as f:
+with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\AI generated portfolio.md", "w", encoding="utf-8") as f:
     f.write(markdown_response)
 
-print("Markdown resume created successfully!")
+print("Markdown portfolio created successfully!")
 
 
