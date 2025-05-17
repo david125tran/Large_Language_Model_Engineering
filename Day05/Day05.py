@@ -10,13 +10,13 @@ from openai import OpenAI
 
 
 # ------------------------------------ Load Environment Variables ----------------------------------
-# Specify the path to your .env file
+# Specify the path to the .env file
 env_path = r"C:\Users\Laptop\Desktop\Coding\LLM\Projects\llm_engineering\.env"
 
 # Load the .env file
 load_dotenv(dotenv_path=env_path, override=True)
 
-# Access the API key
+# Access the API key stored in the environment variable
 api_key = os.getenv("OPENAI_API_KEY")
 
 # print(api_key)
@@ -29,13 +29,6 @@ openai = OpenAI(api_key=api_key)
 
 
 # ------------------------------------ Functions ---------------------------------- 
-# A class to represent a Webpage
-
-# Some websites need you to use proper headers when fetching them:
-headers = {
- "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
-}
-
 class Website:
     """
     A utility class to represent a Website that we have scraped, now with links
@@ -45,8 +38,12 @@ class Website:
         """
         Initialize the Website object with a URL and scrape the webpage.
         """
+        # Some websites need you to use proper headers when fetching them:
+        self.headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
+        }
         self.url = url
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=self.headers)
         self.body = response.content
         soup = BeautifulSoup(self.body, 'html.parser')
         self.title = soup.title.string if soup.title else "No title found"
@@ -67,6 +64,10 @@ class Website:
         return f"Webpage Title:\n{self.title}\nWebpage Contents:\n{self.text}\n\n"
 
 def get_links_user_prompt(website):
+    """
+    Create a user prompt for the AI model to extract links from the website.  Return
+    the links in a format that the AI model can understand.
+    """
     user_prompt = ""
     # Extract all links and append links to the user prompt
     user_prompt += "\n".join(website.links)
@@ -74,6 +75,10 @@ def get_links_user_prompt(website):
     return user_prompt
 
 def get_links(url, link_system_prompt):
+    """
+    Get the relevant links from the website and return them in a json format.  
+    Request in the system prompt for the response to be returend in json format.
+    """
     website = Website(url)
     response = openai.chat.completions.create(
         model=MODEL,
@@ -87,6 +92,14 @@ def get_links(url, link_system_prompt):
     return json.loads(result)
 
 def create_resume(links, link_system_prompt):
+    """
+    Create a detailed markdown resume for the user with the links provided to showcase
+    their projects to show to a potential employer.  Write a biography showcasing
+    what skills that the user has and what they can do using an API call to the OpenAI API
+    platform ('gpt-4o-mini' model).  The response should be in markdown format.
+
+    Request in the system prompt for the response to be returned in markdown format.
+    """
     response = openai.chat.completions.create(
         model=MODEL,
         messages=[
@@ -157,7 +170,8 @@ the markdown resume to make it more visually appealing.
 
 markdown_response = create_resume(ai_response, link_system_prompt)
 
-# Save the response to a markdown file
+# Save the response to a markdown file with enconding set to utf-8 
+# to avoid any encoding issues from emojis in the markdown file
 with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\resume.md", "w", encoding="utf-8") as f:
     f.write(markdown_response)
 
