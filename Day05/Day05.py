@@ -172,7 +172,7 @@ markdown_response = create_resume(ai_response, link_system_prompt)
 
 # Save the response to a markdown file with enconding set to utf-8 
 # to avoid any encoding issues from emojis in the markdown file
-with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\resume.md", "w", encoding="utf-8") as f:
+with open(r"C:\Users\Laptop\Desktop\Coding\LLM\Day05\AI generated resume.md", "w", encoding="utf-8") as f:
     f.write(markdown_response)
 
 print("Markdown resume created successfully!")
