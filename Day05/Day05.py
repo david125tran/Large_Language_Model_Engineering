@@ -104,7 +104,7 @@ def create_resume(links, link_system_prompt):
         model=MODEL,
         messages=[
             {"role": "system", "content": link_system_prompt},
-            {"role": "user", "content": str(links)}
+            {"role": "user", "content": str(links)} # Pass the JSON in as a string
           ],
     )
     result = response.choices[0].message.content
