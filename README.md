@@ -53,7 +53,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         </p>
 
 ### **Day 09: Advanced LLM Tooling** 🛠️
-- **Objective:** Developing an AI Chatbot as a Gradio App, focusing on maintaining conversational context and equipping the bot with a custom tool to add additional knowledge to the bot.  This bot provides nutritional data for fruits from a specific source (through API integration) and alerts the end user if it is unable to find data through the API call.  Integrating the chat bot with API interactions is a very powerful tool because the data source can be controlled.  
+- **Objective:** Developing an AI Chatbot as a Gradio App, focusing on maintaining conversational context and equipping the bot with a custom tool to add additional knowledge to the bot.  This bot provides nutritional data for fruits from a specific source (through API integration) and alerts the end user if it is unable to find data through the API call.  I used a free fruit data API that doesn't require authentication just to get the code up & running faster.  But for proof of concept, integrating the chat bot with API interactions is a very powerful tool because the data source can be controlled.  
 - **Tech Stack:** OpenAI API, Gradio App, API integration (Fruitvice API)
 - **Highlights:** Robust API integration gracefully handling when a fruit is not found in the API call.
 
