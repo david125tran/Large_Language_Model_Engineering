@@ -17,3 +17,4 @@ I then put this idea (from my chatbot) into a ChatGPT for image generation:
   
 And then I get a cool photo with some cats!  
 ![ChatGPT generated image](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg)  
+<img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg" alt="ChatGPT generated image" width="50%" height="auto">
