@@ -58,7 +58,12 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Highlights:** Robust API integration gracefully handling when a fruit is not found in the API call.
 
 ### **Day 10: Multimodal AI Assistant, Image & Sound Generation** 🤖
-- **Objective:** 
-- **Tech Stack:** 
-- **Highlights:** 
+- **Objective:** Build an interactive multimodal AI assistant that can
+    - 💬 Chat with users using OpenAI's GPT model.
+    - 🎨 Generate images based on user prompts via DALL·E 3.
+    - 🔊 Speak its responses aloud using text-to-speech (TTS).
+    - 🖥️ Present everything in a user-friendly web interface using Gradio.
+- **Tech Stack:** OpenAI API (Dall-e-3 for image generation), Gradio App, tts-1: Text-to-speech 
+- **Highlights:** Seamless conversation flow powered by GPT.  Real-time image generation from user descriptions
+  
 ---
