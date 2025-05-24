@@ -8,4 +8,12 @@ This repo is me coding along with an online course on LLM.  But I diverge from t
 **Day06** - Connecting to different LLM platforms.  Then configuring Open AI's 'GPT-4o' and Google's Gemini 1.5 Flash models to adopt contrasting personas to talk to one another.  GPT's stateless nature requires me to maintain the conversation history while I am able to leverage Gemini's persistent chat capability.  The script then runs a defined number of conversation turns and the dialog is then saved to an HTML file for easier viewing.  I configure GPT to be a gullable child and Gemini to be a teacher that loves telling elaborate lies involving Dragons and Unicorns.  You can paste the HTML contents to an [Online HTML Viewer](https://html.onlineviewer.net/) to render the HTML for easier viewing.  
 **Day07** - Creating a simple web app with the Gradio package.  The app is configured to receive a user input for how they want to edit a photo using OpenAI's 'dall-e-2' model.  The image is then passed to the model for it to be edited by AI.    
 ![Gradio Web Server](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day07/Gradio%20Web%20Server.png)  
-**Day08** - AI Chatbot, maintaining context between messages  
+**Day08** - Creating an AI Chatbot, maintaining context between messages, & configuring it as a Shiny App.  This website (chatbot) acts as an "AI Art Idea Generator Assistant" that helps you come up with creative ideas for images featuring your pets. You can chat with it to get suggestions on different art styles, colors, and themes for AI-generated pictures.  
+Example:  
+![Shiny App Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/AI%20Prompt.jpg)
+  
+I then put this idea (from my chatbot) into a ChatGPT for image generation:  
+![ChatGPT image generation](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/ChatGPT%20Prompt.jpg)  
+  
+And then I get a cool photo with some cats!  
+![ChatGPT generated image](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg)  
