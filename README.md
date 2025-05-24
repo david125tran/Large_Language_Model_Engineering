@@ -43,7 +43,7 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Highlights:** Created an "AI Art Idea Generator Assistant" chatbot specifically designed to help users brainstorm creative ideas for pet-themed AI-generated images. It suggests art styles, colors, and themes!
     - **Example Chat with the OpenAI Chatbot:**
         ![Shiny App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/AI%20Prompt.jpg)
-    - **Putting the Idea into Action (ChatGPT for Image Generation):**
+    - **Putting the Idea into Action (using ChatGPT for Image Generation with the idea):**
         <p align="center">
             <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/ChatGPT%20Prompt.jpg" alt="ChatGPT generated image prompt" width="70%" height="auto">
         </p>
