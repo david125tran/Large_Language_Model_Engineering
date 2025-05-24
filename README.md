@@ -15,7 +15,7 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Tech Stack:** [OpenAI API Platform](https://platform.openai.com/docs/api-reference/introduction) (using 'gpt-4o-mini').
 - **Highlights:** Built a system to automate interactions with language models and extract key information from scraped websites. Imagine instantly summarizing an entire article!
 
-### **Day 02: Taking AI Local with Ollama** 🦙 
+### **Day 02: Configuring AI Chatbot Locally with Ollama** 🦙 
 - **Objective:** Enabling local execution of an AI model (LLaMA) for offline capabilities.
 - **Tech Stack:** Ollama API, LLaMA model.
 - **Highlights:** Successfully set up a local LLM environment, proving that powerful AI isn't always cloud-bound. This opens up possibilities for privacy-focused or resource-constrained applications.
@@ -25,8 +25,8 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Tech Stack:** BeautifulSoup (for web scraping), OpenAI's ['gpt-4o-mini'](https://platform.openai.com/docs/models/gpt-4o-mini) API.
 - **Highlights:** Developed a script that scrapes my GitHub for relevant project links and then uses an LLM to automatically generate a well-formatted markdown portfolio. Automating content creation for showcasing work!
 
-### **Day 06: I configure GPT to be a gullable child and Gemini to be a teacher that loves telling elaborate lies involving Dragons and Unicorns.** 🎭
-- **Objective:** Configuring different LLM platforms to adopt contrasting personas and engage in a defined conversation.
+### **Day 06: Configuring different LLM platforms to engage in a defined conversation together** 🎭
+- **Objective:** Configuring different LLM platforms to adopt contrasting personas and engage in a defined conversation.  I configure GPT to be a gullable child and Gemini to be a teacher that loves telling elaborate lies involving Dragons and Unicorns.  I make these AI platforms talk to one another.  
 - **Tech Stack:** OpenAI's 'GPT-4o', Google's Gemini 1.5 Flash.
 - **Highlights:** Witness a hilarious dialogue between a "gullible child" GPT and a "teacher who loves telling elaborate lies involving Dragons and Unicorns" Gemini. Overcame GPT's statelessness by maintaining conversation history. The entire dialog is saved to an HTML file for easy viewing!
     - 🔗 [View the conversation HTML here!](https://html.onlineviewer.net/) (Paste the generated HTML content here for easier viewing)
