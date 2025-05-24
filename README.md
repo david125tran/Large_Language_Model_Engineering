@@ -9,12 +9,12 @@ This repo is me coding along with an online course on LLM.  But I diverge from t
 **Day07** - Creating a simple web app with the Gradio package.  The app is configured to receive a user input for how they want to edit a photo using OpenAI's 'dall-e-2' model.  The image is then passed to the model for it to be edited by AI.    
 ![Gradio Web Server](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day07/Gradio%20Web%20Server.png)  
 **Day08** - Creating an AI Chatbot, maintaining context between messages, & configuring it as a Shiny App.  This website (chatbot) acts as an "AI Art Idea Generator Assistant" that helps you come up with creative ideas for images featuring your pets. You can chat with it to get suggestions on different art styles, colors, and themes for AI-generated pictures.  
-Example:  
+**Example Chat with OpenAI configured Chatbot:** 
+<img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/AI%20Prompt.jpg" alt="ChatGPT generated image" width="80%" height="auto">
 ![Shiny App Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/AI%20Prompt.jpg)
   
-I then put this idea (from my chatbot) into a ChatGPT for image generation:  
-![ChatGPT image generation](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/ChatGPT%20Prompt.jpg)  
-  
-And then I get a cool photo with some cats!  
-![ChatGPT generated image](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg)  
-<img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg" alt="ChatGPT generated image" width="50%" height="auto">
+**I then put this idea (from my chatbot) into a ChatGPT for image generation:**
+<img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/ChatGPT%20Prompt.jpg" alt="ChatGPT generated image" width="30%" height="auto">
+
+**And then I get a cool photo with some cats!**
+<img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg" alt="ChatGPT generated image" width="30%" height="auto">
