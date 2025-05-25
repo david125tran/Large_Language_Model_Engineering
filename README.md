@@ -56,7 +56,9 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Objective:** Developing an AI Chatbot as a Gradio App, focusing on maintaining conversational context and equipping the bot with a custom tool to add additional knowledge to the bot.  This bot provides nutritional data for fruits from a specific source (through API integration) and alerts the end user if it is unable to find data through the API call.  I used a free fruit data API that doesn't require authentication just to get the code up & running faster.  But for proof of concept, integrating the chat bot with API interactions is a very powerful tool because the data source can be controlled or the LLM can be trained with additional data.  
 - **Tech Stack:** OpenAI API, Gradio App, API integration (Fruitvice API)
 - **Highlights:** Robust API integration gracefully handling when a fruit is not found in the API call.
-
+- **Example Chat with the OpenAI Chatbot:**
+        ![Gradio App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day09/Gradio%20Fruit%20Chatbot.jpg)
+  
 ### **Day 10: Multimodal AI Assistant, Image & Sound Generation** 🤖
 - **Objective:** Build an interactive multimodal (combine natural language understanding w/image generation & speech synthesis) AI assistant that can
     - 💬 Chat with users using OpenAI's GPT model.
