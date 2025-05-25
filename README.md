@@ -67,5 +67,17 @@ Here's a peek into the evolving projects and concepts within this repository:
     - 🖥️ Present everything in a user-friendly web interface using Gradio.
 - **Tech Stack:** OpenAI API (Dall-e-3 for image generation), Gradio App, tts-1: Text-to-speech 
 - **Highlights:** Seamless conversation flow powered by GPT.  Real-time image generation from user descriptions
+
+### **Day 11: Surrealistic Image Generation with FluxPipeline on GPU/CPU** 🎨  
+- **Objective:** Generate complex, surrealistic images using diffusion-based models from Hugging Face with efficient GPU acceleration or fallback to CPU.  
+    - 🔥 Load and run the FluxPipeline model for text-to-image generation with precision control and reproducibility via manual seeding.  
+    - 🌌 Create vivid, imaginative scenes with detailed textual prompts.  
+    - 💻 Provide GPU info to verify hardware acceleration availability (commented for optional use).  
+- **Tech Stack:** Hugging Face `diffusers` FluxPipeline, PyTorch (CUDA), Google Colab userdata API for secure key management, PIL for image handling.  
+- **Highlights:**  
+    - Flexible runtime support (GPU with float16 precision or CPU fallback).  
+    - Use of seeded random generators for consistent image outputs.  
+    - Elaborate prompt engineering to create highly detailed surreal imagery.  
+    - Integration with Hugging Face Hub authentication via token 🔑 login.
   
 ---
