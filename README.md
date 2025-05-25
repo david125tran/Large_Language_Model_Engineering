@@ -40,7 +40,7 @@ Here's a peek into the evolving projects and concepts within this repository:
 ### **Day 08: Shiny App Chatbot - Your AI Art Idea Assistant** 🎨
 - **Objective:** Developing an AI Chatbot as a Shiny App, focusing on maintaining conversational context.
 - **Tech Stack:** OpenAI API, Shiny App.
-- **Highlights:** Created an "AI Art Idea Generator Assistant" chatbot specifically designed to help users brainstorm creative ideas for pet-themed AI-generated images. It suggests art styles, colors, and themes!
+- **Highlights:** Created an "AI Art Idea Generator Assistant" chatbot specifically designed to help users brainstorm creative ideas for pet-themed AI-generated images by configuring system context. It suggests art styles, colors, and themes!
     - **Example Chat with the OpenAI Chatbot:**
         ![Shiny App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/AI%20Prompt.jpg)
     - **Putting the Idea into Action (using ChatGPT for Image Generation with the idea):**
