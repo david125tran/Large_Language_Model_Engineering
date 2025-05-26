@@ -86,5 +86,17 @@ Here's a peek into the evolving projects and concepts within this repository:
     - Use of seeded random generators for consistent image outputs.  
     - Elaborate prompt engineering to create highly detailed surreal imagery.  
     - Integration with Hugging Face Hub authentication via token 🔑 login.
-  
+
+
+### **Day 12: Hugging Face Pipelines & Model Integration with Google Colab 🚀  
+- **Objective:** Integrate multiple Hugging Face pipelines in Google Colab for various NLP and multimodal tasks such as sentiment analysis, translation, image generation, and text-to-speech.  
+    - 🧠 Leverage GPU acceleration for fast processing of models like sentiment analysis, text summarization, and translation.
+    - 🎨 Generate images using the Stable Diffusion model and synthesize speech from text with Microsoft's TTS model.
+- **Tech Stack:** 
+    - Hugging Face Transformers & Diffusers
+    - Google Colab for API management and hosting
+    - PyTorch (CUDA) for GPU acceleration
+- **Highlights:**  
+    - Integration with Hugging Face models for diverse NLP and multimodal tasks.
+    - Image generation and text-to-speech synthesis with pre-trained models.
 ---
