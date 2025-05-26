@@ -67,6 +67,10 @@ Here's a peek into the evolving projects and concepts within this repository:
     - 🖥️ Present everything in a user-friendly web interface using Gradio.
 - **Tech Stack:** OpenAI API (Dall-e-3 for image generation), Gradio App, tts-1: Text-to-speech 
 - **Highlights:** Seamless conversation flow powered by GPT.  Real-time image generation from user descriptions
+    - **Example Chat with the OpenAI Chatbot:**
+        ![Shiny App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day10/Dashboard.jpg)
+    - **This is one of the photos that I had my chatbot create.  It is surreal!**
+        ![Shiny App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day10/Downloads/66870a9294ff47bc9cc0636f0aba180d.jpg)
 
 ### **Day 11: Surrealistic Image Generation with FluxPipeline on GPU/CPU** 🎨  
 - **Objective:** Generate complex, surrealistic images using diffusion-based models from Hugging Face with efficient GPU acceleration or fallback to CPU.  
