@@ -1,4 +1,4 @@
-# 🔥 **LLM Engineering Playground: My Journey with Large Language Models** 🔥
+# 🔥 **LLM Engineering Playground** 🔥
 
 ### Exploring the Frontier of AI & Crafting Unique Solutions
 
