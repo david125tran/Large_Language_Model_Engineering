@@ -99,4 +99,12 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Highlights:**  
     - Integration with Hugging Face models for diverse NLP and multimodal tasks.
     - Image generation and text-to-speech synthesis with pre-trained models.
+
+ 
+### **Day 13: Tokenizers - Exploring LLM Inputs 🧠 
+- **Objective:** Understand how LLMs process text by encoding and decoding with various tokenizers.
+- **Tech Stack:** 
+    - Hugging Face Transformers, Colab, Meta’s LLaMA 3.1, Phi-3, Qwen2, Starcoder2.
+- **Highlights:**  
+    - Used Hugging Face open-source models to tokenize text and code, applied chat templates, and compared token outputs across multiple models.
 ---
