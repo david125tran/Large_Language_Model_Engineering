@@ -88,7 +88,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     - Integration with Hugging Face Hub authentication via token 🔑 login.
 
 
-### **Day 12: Hugging Face Pipelines & Model Integration with Google Colab 🚀  
+### **Day 12: Hugging Face Pipelines & Model Integration with Google Colab** 🚀  
 - **Objective:** Integrate multiple Hugging Face pipelines in Google Colab for various NLP and multimodal tasks such as sentiment analysis, translation, image generation, and text-to-speech.  
     - 🧠 Leverage GPU acceleration for fast processing of models like sentiment analysis, text summarization, and translation.
     - 🎨 Generate images using the Stable Diffusion model and synthesize speech from text with Microsoft's TTS model.
@@ -101,7 +101,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     - Image generation and text-to-speech synthesis with pre-trained models.
 
  
-### **Day 13: Tokenizers - Exploring LLM Inputs 🧠 
+### **Day 13: Tokenizers - Exploring LLM Inputs** 🧠 
 - **Objective:** Understand how LLMs process text by encoding and decoding with various tokenizers.
 - **Tech Stack:** 
     - Hugging Face Transformers, Colab, Meta’s LLaMA 3.1, Phi-3, Qwen2, Starcoder2.
