@@ -107,4 +107,20 @@ Here's a peek into the evolving projects and concepts within this repository:
     - Hugging Face Transformers, Colab, Meta’s LLaMA 3.1, Phi-3, Qwen2, Starcoder2.
 - **Highlights:**  
     - Used Hugging Face open-source models to tokenize text and code, applied chat templates, and compared token outputs across multiple models.
+
+
+### **Day 14: Under the Hood of Transformers** 🔧
+- **Objective:** Demystify the internals of modern Transformer models by working directly with their lower-level PyTorch-based APIs using the Hugging Face transformers library. Use memory-efficient 4-bit quantization.  
+- **Tech Stack:** 
+    - Google Colab (Free T4 GPU runtime)
+    - Hugging Face Transformers
+    - PyTorch
+    - BitsAndBytes (for 4-bit quantization)
+- **Highlights:**  
+    - This notebook provides a hands-on tour of five state-of-the-art open-source Transformer models:
+        - 🦙 LLaMA 3.1 by Meta
+        - 🧠 Phi-3 by Microsoft
+        - 💎 Gemma by Google
+        - 🌪️ Mixtral by Mistral
+        - 🐉 Qwen by Alibaba Cloud
 ---
