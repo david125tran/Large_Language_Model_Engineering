@@ -45,7 +45,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         ![Shiny App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/AI%20Prompt.jpg)
     - **Putting the Idea into Action (using ChatGPT for Image Generation with the idea):**
         <p align="center">
-            <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/ChatGPT%20Prompt.jpg" alt="ChatGPT generated image prompt" width="70%" height="auto">
+            <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/ChatGPT%20Prompt.jpg" alt="ChatGPT generated image prompt" width="50%" height="auto">
         </p>
     - **And the Amazing Result!** (Cats with a Salvador Dalí influence!)
         <p align="center">
@@ -71,7 +71,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         ![Shiny App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day10/Dashboard.jpg)
     - **This is one of the photos that I had my chatbot create.  I think this is one the coolest things.**
         <p align="center">
-            <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day10/Downloads/66870a9294ff47bc9cc0636f0aba180d.jpg" alt="ChatGPT generated image prompt" width="70%" height="auto">
+            <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day10/Downloads/66870a9294ff47bc9cc0636f0aba180d.jpg" alt="ChatGPT generated image prompt" width="40%" height="auto">
         </p>
 
 
