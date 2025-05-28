@@ -49,7 +49,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         </p>
     - **And the Amazing Result!** (Cats with a Salvador Dalí influence!)
         <p align="center">
-            <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg" alt="AI-generated cats with surreal influence" width="50%" height="auto">
+            <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg" alt="AI-generated cats with surreal influence" width="40%" height="auto">
         </p>
 
 ### **Day 09: Advanced LLM Tooling** 🛠️
