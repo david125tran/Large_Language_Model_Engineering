@@ -125,7 +125,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         - 🐉 **Qwen** by Alibaba Cloud
      
 
-### **Day 15: Audio to Text Summarization** 🔧
+### **Day 15: Audio to Text Summarization** 🎧
 - **Objective:** This notebook transforms audio into structured meeting minutes using advanced AI.  
 - **Tech Stack:** 
     - 🤫 **Whisper-1** by OpenAI (For speech-to-text transcription)
