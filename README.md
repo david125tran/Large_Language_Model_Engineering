@@ -118,9 +118,19 @@ Here's a peek into the evolving projects and concepts within this repository:
     - BitsAndBytes (for 4-bit quantization)
 - **Highlights:**  
     - This notebook provides a hands-on tour of five state-of-the-art open-source Transformer models:
-        - 🦙 LLaMA 3.1 by Meta
-        - 🧠 Phi-3 by Microsoft
-        - 💎 Gemma by Google
-        - 🌪️ Mixtral by Mistral
-        - 🐉 Qwen by Alibaba Cloud
+        - 🦙 **LLaMA 3.1** by Meta
+        - 🧠 **Phi-3** by Microsoft
+        - 💎 **Gemma** by Google
+        - 🌪️ **Mixtral** by Mistral
+        - 🐉 **Qwen** by Alibaba Cloud
+     
+
+### **Day 15: Audio to Text Summarization** 🔧
+- **Objective:** This notebook transforms audio into structured meeting minutes using advanced AI.  
+- **Tech Stack:** 
+    - 🤫 **Whisper-1** by OpenAI (For speech-to-text transcription)
+    - 🦙 **LLaMA 3.1** by Meta (For summarizing text & extract key details)
+    - BitsAndBytes (for 4-bit quantization)
+- **Highlights:**
+    - Audio transcription, meeting minutes generation, quantization for efficiency, streamed output (demonstrate how to stream LLM's output for a more interactive human-like experience), & Google Drive integration.  
 ---
