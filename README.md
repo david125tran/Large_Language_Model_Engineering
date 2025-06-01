@@ -140,7 +140,6 @@ Here's a peek into the evolving projects and concepts within this repository:
   - [OpenAI API](https://platform.openai.com/docs/api-reference/introduction)
   - [Anthropic Claude API](https://console.anthropic.com/)
 - **Highlights:**  
-  - Supports multiple LLMs (OpenAI + Claude) for redundancy and experimentation  
   - Converts Python into various target languages with a focus on **performance** and **output fidelity**  
   - Cleans up LLM responses (e.g. removes markdown artifacts, formats extensions)  
 
