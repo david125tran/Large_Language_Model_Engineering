@@ -133,4 +133,16 @@ Here's a peek into the evolving projects and concepts within this repository:
     - BitsAndBytes (for 4-bit quantization)
 - **Highlights:**
     - Audio transcription, meeting minutes generation, quantization for efficiency, streamed output (demonstrate how to stream LLM's output for a more interactive human-like experience), & Google Drive integration.  
+
+### **Day 16: Code Alchemist — Python to Lightning-Fast Languages** ⚡
+- **Objective:** Transform Python scripts into high-performance equivalents in languages like C++, Rust, Go, and more using state-of-the-art LLMs.
+- **Tech Stack:** 
+  - [OpenAI API](https://platform.openai.com/docs/api-reference/introduction) (`gpt-4o` / `gpt-4o-mini`)
+  - [Anthropic Claude API](https://console.anthropic.com/)
+
+- **Highlights:**  
+  - Supports multiple LLMs (OpenAI + Claude) for redundancy and experimentation  
+  - Converts Python into various target languages with a focus on **performance** and **output fidelity**  
+  - Cleans up LLM responses (e.g. removes markdown artifacts, formats extensions)  
+
 ---
