@@ -137,9 +137,8 @@ Here's a peek into the evolving projects and concepts within this repository:
 ### **Day 16: Code Alchemist — Python to Lightning-Fast Languages** ⚡
 - **Objective:** Transform Python scripts into high-performance equivalents in languages like C++, Rust, Go, and more using state-of-the-art LLMs.
 - **Tech Stack:** 
-  - [OpenAI API](https://platform.openai.com/docs/api-reference/introduction) (`gpt-4o` / `gpt-4o-mini`)
+  - [OpenAI API](https://platform.openai.com/docs/api-reference/introduction)
   - [Anthropic Claude API](https://console.anthropic.com/)
-
 - **Highlights:**  
   - Supports multiple LLMs (OpenAI + Claude) for redundancy and experimentation  
   - Converts Python into various target languages with a focus on **performance** and **output fidelity**  
