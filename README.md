@@ -143,4 +143,9 @@ Here's a peek into the evolving projects and concepts within this repository:
   - Converts Python into various target languages with a focus on **performance** and **output fidelity**  
   - Cleans up LLM responses (e.g. removes markdown artifacts, formats extensions)  
 
+
+### **Day 17: Code Alchemist++ — Multi-LLM, Multi-Language Optimization** 🧪⚙️
+- **Objective:** Expand Day 16's converter into a multi-model, multi-language code optimizer by integrating Hugging Face inference endpoint.
+- **New Capabilities:** 
+  - [CodeQwen1.5-7B-Chat](https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat)
 ---
