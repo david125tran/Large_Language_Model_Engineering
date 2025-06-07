@@ -170,7 +170,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     ![Day 18 Gradio RAG Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day18/Implementation.jpg)
 
 ### **Day 19: Enhancing RAG with LangChain Document Loaders & Text Splitters** 📄✂️
-- **Objective:** Deepen the capabilities of the RAG system by integrating **LangChain's document loaders** and advanced **text splitting techniques**. This day focuses on how to efficiently ingest diverse document types, add metadata, and intelligently chunk text for optimal LLM processing.
+- **Objective:** Deepen the capabilities of the RAG system by integrating **LangChain's document loaders** and advanced **text splitting techniques**. This day focuses on how to efficiently ingest diverse document types, add metadata, and intelligently chunk text for optimal LLM processing. This script is a continuation of Day 18.  
 - **Tech Stack:**
     - **LangChain** (`DirectoryLoader`, `TextLoader`, `CharacterTextSplitter`)
 - **Highlights:**
@@ -188,7 +188,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     3.  **Inspect & Search:** The resulting chunks are inspected to verify their structure and content. A basic **keyword search** (e.g., for "CEO") is performed across all chunks to demonstrate how specific information can be isolated after the chunking process.
  
 ### **Day 20: Vector Embeddings & Visualizing Semantic Space with t-SNE** 📊✨
-- **Objective:** This session dives deep into **vector embeddings**, a crucial concept for advanced RAG systems. It covers how text is converted into numerical representations, stored in a **vector database (Chroma)**, and then visualized using **t-SNE** to explore the semantic relationships within our knowledge base.
+- **Objective:** This session dives deep into **vector embeddings**, a crucial concept for advanced RAG systems. It covers how text is converted into numerical representations, stored in a **vector database (Chroma)**, and then visualized using **t-SNE** to explore the semantic relationships within our knowledge base. This script is a continuation of Days 18-19. 
 - **Tech Stack:**
     - **LangChain** (`OpenAIEmbeddings`, `Chroma`)
     - **OpenAI API** (`text-embedding-ada-002` for embeddings)
@@ -223,5 +223,18 @@ Here's a peek into the evolving projects and concepts within this repository:
       ![3D Chroma Vector Store Visualization]()
     - **5D Embedding Visualization (3D t-SNE + Color + Size):**
       ![5D Embedding Visualization]()
+
+
+### **Day 21: RAG System - Vector Store Visualization & Chatbot with FAISS** 📊🗣️
+
+- **Objective:** Build a Retrieval-Augmented Generation (RAG) Knowledge Worker using **FAISS (Facebook AI Similarity Search)** for efficient vector storage and retrieval. This script is a continuation of Days 18-20 but uses `FAISS` instead of `Chroma` to handle vector storage & retrieval. `FAISS` is highly optimized for speed, leveraging advanced indexing algorithms & strong GPU acceleration.  
+- **Tech Stack:**
+    - `LangChain`
+    - `OpenAI` ('gpt-4o-mini')
+    - `FAISS`
+- **Additions from Days 18-20:**
+    - **FAISS Vector Store:** Stores embeddings in a `FAISS` index for fast similarity searches.
+    - **Conversational RAG:** Implements a LangChain `ConversationalRetrievalChain` with `ChatOpenAI` and `ConversationBufferMemory`. The chatbot retrieves relevant document chunks, augments the LLM's prompt with context, and generates informed responses while maintaining chat history.
+    - **Chat Interaction:** The chatbot uses the `FAISS` index to retrieve relevant context for user queries,  augmenting the LLM's response and maintaining conversation history.
 
 
