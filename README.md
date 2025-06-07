@@ -4,7 +4,6 @@
 
 This repository chronicles my hands-on adventure into Large Language Model (LLM) engineering. While I'm coding along with an online course, I'm deliberately diverging to infuse my own creative twists and explore practical, real-world applications. Expect to see custom integrations, unique AI interactions, and a focus on getting my hands dirty with powerful language models.
 
----
 
 ## 🚀 **My LLM Explorations (By Day)**
 
@@ -31,13 +30,13 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Tech Stack:** OpenAI's 'GPT-4o', Google's Gemini 1.5 Flash.
 - **Highlights:** Witness a hilarious dialogue between a "gullible child" GPT and a "teacher who loves telling elaborate lies involving Dragons and Unicorns" Gemini. Overcame GPT's statelessness by maintaining conversation history. The entire dialog is saved to an HTML file for easy viewing!
     - 🔗 [View the conversation HTML here!](https://html.onlineviewer.net/) (Paste the generated HTML content here for easier viewing)
-
+---
 ### **Day 07: Gradio Web App - AI Photo Editor** ✨
 - **Objective:** Creating a simple web application for AI-powered photo editing.
 - **Tech Stack:** Gradio, OpenAI's 'dall-e-2' model.
 - **Highlights:** Built an interactive web app where users can input text prompts to dynamically edit images using DALL-E 2.
     - ![Gradio Web Server in Action](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day07/Gradio%20Web%20Server.png)
-
+---
 ### **Day 08: Shiny App Chatbot - Your AI Art Idea Assistant** 🎨
 - **Objective:** Developing an AI Chatbot as a Shiny App, focusing on maintaining conversational context.
 - **Tech Stack:** OpenAI API, Shiny App.
@@ -52,14 +51,14 @@ Here's a peek into the evolving projects and concepts within this repository:
         <p align="center">
             <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day08/Cats%20with%20a%20Salvador%20Dali%20Influence.jpg" alt="AI-generated cats with surreal influence" width="40%" height="auto">
         </p>
-
+---
 ### **Day 09: Advanced LLM Tooling** 🛠️
 - **Objective:** Developing an AI Chatbot as a Gradio App, focusing on maintaining conversational context and equipping the bot with a custom tool to add additional knowledge to the bot.  This bot provides nutritional data for fruits from a specific source (through API integration) and alerts the end user if it is unable to find data through the API call.  I used a free fruit data API that doesn't require authentication just to get the code up & running faster.  But for proof of concept, integrating the chat bot with API interactions is a very powerful tool because the data source can be controlled or the LLM can be trained with additional data.  
 - **Tech Stack:** OpenAI API, Gradio App, API integration (Fruitvice API)
 - **Highlights:** Robust API integration gracefully handling when a fruit is not found in the API call.
 - **Example Chat with the OpenAI Chatbot:**
         ![Gradio App Chatbot Interaction](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day09/Gradio%20Fruit%20Chatbot.jpg)
-  
+---
 ### **Day 10: Multimodal AI Assistant, Image & Sound Generation** 🤖
 - **Objective:** Build an interactive multimodal (combine natural language understanding w/image generation & speech synthesis) AI assistant that can
     - 💬 Chat with users using OpenAI's GPT model.
@@ -74,8 +73,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         <p align="center">
             <img src="https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day10/Downloads/66870a9294ff47bc9cc0636f0aba180d.jpg" alt="ChatGPT generated image prompt" width="40%" height="auto">
         </p>
-
-
+---
 ### **Day 11: Surrealistic Image Generation with FluxPipeline on GPU/CPU** 🎨  
 - **Objective:** Generate complex, surrealistic images using diffusion-based models from Hugging Face with efficient GPU acceleration or fallback to CPU.  
     - 🔥 Load and run the FluxPipeline model for text-to-image generation with precision control and reproducibility via manual seeding.  
@@ -87,8 +85,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     - Use of seeded random generators for consistent image outputs.  
     - Elaborate prompt engineering to create highly detailed surreal imagery.  
     - Integration with Hugging Face Hub authentication via token 🔑 login.
-
-
+---
 ### **Day 12: Hugging Face Pipelines & Model Integration with Google Colab** 🚀  
 - **Objective:** Integrate multiple Hugging Face pipelines in Google Colab for various NLP and multimodal tasks such as sentiment analysis, translation, image generation, and text-to-speech.  
     - 🧠 Leverage GPU acceleration for fast processing of models like sentiment analysis, text summarization, and translation.
@@ -100,16 +97,14 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Highlights:**  
     - Integration with Hugging Face models for diverse NLP and multimodal tasks.
     - Image generation and text-to-speech synthesis with pre-trained models.
-
- 
+---
 ### **Day 13: Tokenizers - Exploring LLM Inputs** 🧠 
 - **Objective:** Understand how LLMs process text by encoding and decoding with various tokenizers.
 - **Tech Stack:** 
     - Hugging Face Transformers, Colab, Meta’s LLaMA 3.1, Phi-3, Qwen2, Starcoder2.
 - **Highlights:**  
     - Used Hugging Face open-source models to tokenize text and code, applied chat templates, and compared token outputs across multiple models.
-
-
+---
 ### **Day 14: Under the Hood of Transformers** 🔧
 - **Objective:** Demystify the internals of modern Transformer models by working directly with their lower-level PyTorch-based APIs using the Hugging Face transformers library. Use memory-efficient 4-bit quantization.  
 - **Tech Stack:** 
@@ -124,8 +119,7 @@ Here's a peek into the evolving projects and concepts within this repository:
         - 💎 **Gemma** by Google
         - 🌪️ **Mixtral** by Mistral
         - 🐉 **Qwen** by Alibaba Cloud
-     
-
+---
 ### **Day 15: Audio to Text Summarization** 🎧
 - **Objective:** This notebook transforms audio into structured meeting minutes using advanced AI.  
 - **Tech Stack:** 
@@ -134,7 +128,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     - BitsAndBytes (for 4-bit quantization)
 - **Highlights:**
     - Audio transcription, meeting minutes generation, quantization for efficiency, streamed output (demonstrate how to stream LLM's output for a more interactive human-like experience), & Google Drive integration.  
-
+---
 ### **Day 16: Code Alchemist — Python to Lightning-Fast Languages** ⚡
 - **Objective:** Transform Python scripts into high-performance equivalents in languages like C++, Rust, Go, and more using state-of-the-art LLMs.
 - **Tech Stack:** 
@@ -143,14 +137,12 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Highlights:**  
   - Converts Python into various target languages with a focus on **performance** and **output fidelity**  
   - Cleans up LLM responses (e.g. removes markdown artifacts, formats extensions)  
-
-
+---
 ### **Day 17: Code Alchemist++ — Multi-LLM, Multi-Language Optimization** 🧪⚙️
 - **Objective:** Expand Day 16's converter into a multi-model, multi-language code optimizer by integrating Hugging Face inference endpoint.
 - **New Capabilities:** 
   - [CodeQwen1.5-7B-Chat](https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat)
-
- 
+---
 ### **Day 18: RAG System - Contextualized LLM Chatbot** 📚
 - **Objective:** Develop a Retrieval Augmented Generation (RAG) system to enhance an LLM's ability to answer questions by providing access to an external, domain-specific knowledge base. 
 - **Tech Stack:**
@@ -169,7 +161,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     -  **Generation:** The LLM uses this augmented prompt to generate a highly accurate and contextually relevant response.
 - **Example Interaction (using the Gradio Interface):**
     ![Day 18 Gradio RAG Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day18/Implementation.jpg)
-
+---
 ### **Day 19: Enhancing RAG with LangChain Document Loaders & Text Splitters** 📄✂️
 - **Objective:** Deepen the capabilities of the RAG system by integrating **LangChain's document loaders** and advanced **text splitting techniques**. This day focuses on how to efficiently ingest diverse document types, add metadata, and intelligently chunk text for optimal LLM processing. This script is a continuation of Day 18.  
 - **Tech Stack:**
@@ -187,7 +179,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     1.  **Load Documents:** The script uses `DirectoryLoader` to load all Markdown (`.md`) files from the `knowledge-base` directory and its subfolders. As documents are loaded, metadata like `source` and `doc_type` (derived from the subfolder name) are automatically added.
     2.  **Split Documents:** Loaded documents are then passed to `CharacterTextSplitter`, which divides them into chunks of a specified `chunk_size` (e.g., 1000 characters) with a defined `chunk_overlap` (e.g., 200 characters). This overlap helps preserve context where information might span across two chunks.
     3.  **Inspect & Search:** The resulting chunks are inspected to verify their structure and content. A basic **keyword search** (e.g., for "CEO") is performed across all chunks to demonstrate how specific information can be isolated after the chunking process.
- 
+---
 ### **Day 20: Vector Embeddings & Visualizing Semantic Space with t-SNE** 📊✨
 - **Objective:** This session dives deep into **vector embeddings**, a crucial concept for advanced RAG systems. It covers how text is converted into numerical representations, stored in a **vector database (Chroma)**, and then visualized using **t-SNE** to explore the semantic relationships within our knowledge base. This script is a continuation of Days 18-19. 
 - **Tech Stack:**
@@ -224,8 +216,7 @@ Here's a peek into the evolving projects and concepts within this repository:
       ![3D Chroma Vector Store Visualization]()
     - **5D Embedding Visualization (3D t-SNE + Color + Size):**
       ![5D Embedding Visualization]()
-
-
+---
 ### **Day 21: RAG System - Vector Store Visualization & Chatbot with FAISS** 📊🗣️
 
 - **Objective:** Build a Retrieval-Augmented Generation (RAG) Knowledge Worker using **FAISS (Facebook AI Similarity Search)** for efficient vector storage and retrieval. This script is a continuation of Days 18-20 but uses `FAISS` instead of `Chroma` to handle vector storage & retrieval. `FAISS` is highly optimized for speed, leveraging advanced indexing algorithms & strong GPU acceleration.  
@@ -237,5 +228,18 @@ Here's a peek into the evolving projects and concepts within this repository:
     - **FAISS Vector Store:** Stores embeddings in a `FAISS` index for fast similarity searches.
     - **Conversational RAG:** Implements a LangChain `ConversationalRetrievalChain` with `ChatOpenAI` and `ConversationBufferMemory`. The chatbot retrieves relevant document chunks, augments the LLM's prompt with context, and generates informed responses while maintaining chat history.
     - **Chat Interaction:** The chatbot uses the `FAISS` index to retrieve relevant context for user queries,  augmenting the LLM's response and maintaining conversation history.
+---
+### **Day 22: RAG System Diagnostics & Chunking Strategy** 🔍
+
+- **Objective:** Diagnose and resolve issues in a Retrieval-Augmented Generation (RAG) system where the Large Language Model (LLM) fails to answer questions due to insufficient context. This script is a continuation of Days 18-21. This focuses on understanding LangChain's internal execution flow using callbacks and optimizing the chunking strategy. 
+
+- **Additions from Days 18-21:** 
+    - `LangChain` underneath the hood
+    - `StdOutCallbackHandler`
+
+- **Highlights:** 
+    - **Diagnosing Retrieval Issues with Callbacks:** In Day 21, the RAG system struggled to answer specific questions like **"Who received the prestigious IIOTY award in 2023?"**. By introducing `callbacks=[StdOutCallbackHandler()]` to the `ConversationalRetrievalChain`, you're able to inspect the exact chunks of information being sent to the LLM. This revealed that the relevant information was not being retrieved, leading to the LLM's inability to answer the question.
+    - **Optimizing Chunking Strategy:** The core fix involved adjusting the `k` parameter in the retriever. Previously, the retriever defaulted to a small number of chunks (e.g., `k=4`). By modifying the retriever initialization to `retriever = vectorstore.as_retriever(search_kwargs={"k": 25})`, we significantly increased the number of relevant chunks (to 25) passed to the LLM. This provided the LLM with a much broader context, enabling it to successfully answer the previously unanswerable question about the IIOTY award.
+    - **Understanding `k` and its Implications:** Increasing `k` sends more textual data to the LLM, improving accuracy by providing more context. However, this also means higher token usage (potentially increasing API costs), longer processing times, and the need to be mindful of the LLM's context window limits. This day emphasized the importance of tuning retrieval parameters for optimal RAG performance.
 ---
 
