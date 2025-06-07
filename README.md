@@ -167,5 +167,23 @@ Here's a peek into the evolving projects and concepts within this repository:
     -  **Augmented Prompt:** The retrieved information is "stuffed" into the LLM's prompt alongside the original query.
     -  **Generation:** The LLM uses this augmented prompt to generate a highly accurate and contextually relevant response.
 - **Example Interaction (using the Gradio Interface):**
-    ![Day 18 Gradio RAG Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day18/Implementation.jpg) 
----
+    ![Day 18 Gradio RAG Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day18/Implementation.jpg)
+
+### **Day 19: Enhancing RAG with LangChain Document Loaders & Text Splitters** 📄✂️
+- **Objective:** Deepen the capabilities of the RAG system by integrating **LangChain's document loaders** and advanced **text splitting techniques**. This day focuses on how to efficiently ingest diverse document types, add metadata, and intelligently chunk text for optimal LLM processing.
+- **Tech Stack:**
+    - **LangChain** (`DirectoryLoader`, `TextLoader`, `CharacterTextSplitter`)
+- **Highlights:**
+    - **Automated Document Ingestion:** Utilizes `DirectoryLoader` to automatically discover and load documents from a specified knowledge base directory (`knowledge-base/`), supporting multiple subfolders (e.g., `company`, `contracts`, `employees`, `products`).
+    - **Dynamic Metadata Assignment:** Assigns custom **metadata** (e.g., `doc_type` based on the folder name) to each loaded document, enriching the context available to the LLM.
+    - **Intelligent Text Chunking:** Employs `CharacterTextSplitter` to break down large documents into smaller, **overlapping chunks**. This ensures that:
+        - Information fits within LLM context windows.
+        - Semantic coherence is maintained across chunk boundaries (via `chunk_overlap`).
+        - Retrieval of relevant information is more precise.
+    - **Chunk Inspection:** Provides insights into the chunking process, showing the number of chunks created, their metadata, and content snippets.
+    - **Keyword Search across Chunks:** Demonstrates how to iterate through the created chunks to perform a simple keyword search, highlighting the value of chunking for targeted information retrieval within a RAG pipeline.
+- **How it Works:**
+    1.  **Load Documents:** The script uses `DirectoryLoader` to load all Markdown (`.md`) files from the `knowledge-base` directory and its subfolders. As documents are loaded, metadata like `source` and `doc_type` (derived from the subfolder name) are automatically added.
+    2.  **Split Documents:** Loaded documents are then passed to `CharacterTextSplitter`, which divides them into chunks of a specified `chunk_size` (e.g., 1000 characters) with a defined `chunk_overlap` (e.g., 200 characters). This overlap helps preserve context where information might span across two chunks.
+    3.  **Inspect & Search:** The resulting chunks are inspected to verify their structure and content. A basic **keyword search** (e.g., for "CEO") is performed across all chunks to demonstrate how specific information can be isolated after the chunking process.
+
