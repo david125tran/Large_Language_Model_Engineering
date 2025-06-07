@@ -186,4 +186,42 @@ Here's a peek into the evolving projects and concepts within this repository:
     1.  **Load Documents:** The script uses `DirectoryLoader` to load all Markdown (`.md`) files from the `knowledge-base` directory and its subfolders. As documents are loaded, metadata like `source` and `doc_type` (derived from the subfolder name) are automatically added.
     2.  **Split Documents:** Loaded documents are then passed to `CharacterTextSplitter`, which divides them into chunks of a specified `chunk_size` (e.g., 1000 characters) with a defined `chunk_overlap` (e.g., 200 characters). This overlap helps preserve context where information might span across two chunks.
     3.  **Inspect & Search:** The resulting chunks are inspected to verify their structure and content. A basic **keyword search** (e.g., for "CEO") is performed across all chunks to demonstrate how specific information can be isolated after the chunking process.
+ 
+### **Day 20: Vector Embeddings & Visualizing Semantic Space with t-SNE** 📊✨
+- **Objective:** This session dives deep into **vector embeddings**, a crucial concept for advanced RAG systems. It covers how text is converted into numerical representations, stored in a **vector database (Chroma)**, and then visualized using **t-SNE** to explore the semantic relationships within our knowledge base.
+- **Tech Stack:**
+    - **LangChain** (`OpenAIEmbeddings`, `Chroma`)
+    - **OpenAI API** (`text-embedding-ada-002` for embeddings)
+    - **ChromaDB** (for persistent vector storage)
+    - **Scikit-learn** (`TSNE` for dimensionality reduction)
+    - **Plotly** (for interactive 2D and 3D visualizations)
+- **Key Concepts Covered:**
+    - **Vector Embeddings:** Numerical representations of text that capture semantic meaning. Texts with similar meanings are located closer together in the high-dimensional vector space.
+    - **Semantic Search:** Leveraging embeddings to find text chunks that are *conceptually* similar to a query, rather than just keyword matches. This is a core component of RAG.
+    - **Chroma Vector Store:** A local, persistent vector database used to store our document chunks and their corresponding embeddings, making them easily retrievable.
+    - **t-SNE (t-Distributed Stochastic Neighbor Embedding):** A powerful dimensionality reduction technique used to visualize high-dimensional data, revealing clusters and relationships.
+- **Highlights:**
+    - **Embedding Generation:** Each processed document chunk from Day 19 is converted into a high-dimensional vector using OpenAI's `text-embedding-ada-002` model.
+    - **Vector Database:** The generated embeddings and their associated metadata are stored in a local **ChromaDB** instance.
+    - **Dimensionality Inspection:** Confirms that the embeddings have a typical dimensionality (e.g., 1536 dimensions for `text-embedding-ada-002`).
+    - **Interactive 2D & 3D Visualizations:**
+        - **t-SNE plots** are generated to project the high-dimensional embeddings into an easily interpretable 2D or 3D space.
+        - **Color-coding** (by `doc_type`) and **size-scaling** (by chunk length in the 5D visualization) are used to add more dimensions to the plots, helping to identify semantic clusters and relationships between different types of documents.
+        - **Hover text** provides detailed information (document type, source path, content preview) for each data point upon interaction.
+- **How it Works:**
+    1.  **Load & Chunk Documents:** The script re-uses the document loading and chunking logic from Day 19 to prepare the text data.
+    2.  **Create Embeddings:** An `OpenAIEmbeddings` model is initialized.
+    3.  **Initialize ChromaDB:** A `Chroma` vector store is created (or reset if it already exists) and populated with the document chunks and their embeddings. This process stores the numerical representations on disk.
+    4.  **Visualize with t-SNE:**
+        - All embeddings are retrieved from Chroma.
+        - `TSNE` is applied to reduce the embeddings to 2 or 3 dimensions.
+        - `Plotly` is used to create interactive scatter plots, allowing exploration of how different document types (company, contracts, employees, products) cluster together based on their semantic similarity.
+- **Visual Models:**
+    - **2D Chroma Vector Store Visualization:**
+      ![2D Chroma Vector Store Visualization]()
+    - **3D Chroma Vector Store Visualization:**
+      ![3D Chroma Vector Store Visualization]()
+    - **5D Embedding Visualization (3D t-SNE + Color + Size):**
+      ![5D Embedding Visualization]()
+
 
