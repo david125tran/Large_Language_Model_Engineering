@@ -148,4 +148,24 @@ Here's a peek into the evolving projects and concepts within this repository:
 - **Objective:** Expand Day 16's converter into a multi-model, multi-language code optimizer by integrating Hugging Face inference endpoint.
 - **New Capabilities:** 
   - [CodeQwen1.5-7B-Chat](https://huggingface.co/Qwen/CodeQwen1.5-7B-Chat)
+
+ 
+### **Day 18: RAG System - Contextualized LLM Chatbot** 📚
+- **Objective:** Develop a Retrieval Augmented Generation (RAG) system to enhance an LLM's ability to answer questions by providing access to an external, domain-specific knowledge base. 
+- **Tech Stack:**
+    - OpenAI API ('gpt-4o-mini')
+- **Highlights:**
+    - **RAG Implementation:** Built a system that dynamically retrieves relevant context (employee and product information) from a local knowledge base (`.md` files) and injects it into the LLM's prompt, reducing hallucinations and providing up-to-date information.
+    - **Knowledge Base Integration:** The system loads markdown files from specified directories (`knowledge-base/employees` and `knowledge-base/products`) into a `context` dictionary, making the information readily available for retrieval.
+    - **Context Retrieval Logic:** Implemented a `get_relevant_context` function that intelligently identifies and extracts pertinent information based on keywords in the user's query.
+    - **Prompt Augmentation:** The `add_context` function seamlessly appends the retrieved context to the user's message before sending it to the LLM, ensuring the model has the necessary information to formulate accurate responses.
+    - **Gradio Chat Interface:** A user-friendly Gradio interface allows for interactive conversations, demonstrating the RAG system in action.
+- **How it Works:**
+    1.  **Ingestion (Pre-processing):** Markdown files containing employee profiles and product details are loaded into a Python dictionary, serving as the "knowledge base."
+    2.  **User Query:** A user asks a question via the Gradio interface.
+    3.  **Retrieval:** The system analyzes the user's query, identifies relevant entities (e.g., employee names, product names), and retrieves corresponding information from the pre-loaded knowledge base.
+    4.  **Augmented Prompt:** The retrieved information is "stuffed" into the LLM's prompt alongside the original query.
+    5.  **Generation:** The LLM uses this augmented prompt to generate a highly accurate and contextually relevant response.
+- **Example Interaction (using the Gradio Interface):**
+    ![Day 18 Gradio RAG Chatbot](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day18/Gradio%20RAG%20Chatbot.png) ```
 ---
