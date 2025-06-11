@@ -228,6 +228,7 @@ Here's a peek into the evolving projects and concepts within this repository:
     - **FAISS Vector Store:** Stores embeddings in a `FAISS` index for fast similarity searches.
     - **Conversational RAG:** Implements a LangChain `ConversationalRetrievalChain` with `ChatOpenAI` and `ConversationBufferMemory`. The chatbot retrieves relevant document chunks, augments the LLM's prompt with context, and generates informed responses while maintaining chat history.
     - **Chat Interaction:** The chatbot uses the `FAISS` index to retrieve relevant context for user queries,  augmenting the LLM's response and maintaining conversation history.
+    - ![RAG in Action](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day21/Implementation.jpg)
 ---
 ### **Day 22: RAG System Diagnostics & Chunking Strategy** 🔍
 
