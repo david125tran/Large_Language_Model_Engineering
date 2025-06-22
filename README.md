@@ -242,6 +242,8 @@ Here's a peek into the evolving projects and concepts within this repository:
     - **Diagnosing Retrieval Issues with Callbacks:** In Day 21, the RAG system struggled to answer specific questions like **"Who received the prestigious IIOTY award in 2023?"**. By introducing `callbacks=[StdOutCallbackHandler()]` to the `ConversationalRetrievalChain`, you're able to inspect the exact chunks of information being sent to the LLM. This revealed that the relevant information was not being retrieved, leading to the LLM's inability to answer the question.
     - **Optimizing Chunking Strategy:** The core fix involved adjusting the `k` parameter in the retriever. Previously, the retriever defaulted to a small number of chunks (e.g., `k=4`). By modifying the retriever initialization to `retriever = vectorstore.as_retriever(search_kwargs={"k": 25})`, we significantly increased the number of relevant chunks (to 25) passed to the LLM. This provided the LLM with a much broader context, enabling it to successfully answer the previously unanswerable question about the IIOTY award.
     - **Understanding `k` and its Implications:** Increasing `k` sends more textual data to the LLM, improving accuracy by providing more context. However, this also means higher token usage (potentially increasing API costs), longer processing times, and the need to be mindful of the LLM's context window limits. This day emphasized the importance of tuning retrieval parameters for optimal RAG performance.
+- **Optimizing Chunking Strategy:**
+        ![Chunking Strategy](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day22/Changing%20Chunking%20Strategy.jpg)
 ---
 ### **Day 23: Data Preprocessing for LLM** 📊
 
