@@ -256,3 +256,30 @@ Here's a peek into the evolving projects and concepts within this repository:
     - **Prompt Design:** Created structured prompts for LLM training and testing. 
     - **Data & Token Visualization:** Visualized token and price distributions of the preprocessed data.
 ---
+### **Day 24: Full Data Curation Pipeline for LLM Fine-Tuning** 🧹🧠
+
+- **Objective:** Build a full-scale data processing pipeline to prepare massive real-world datasets for LLM fine-tuning — specifically for product price prediction.
+
+- **Data Source:**  
+    - [Amazon Reviews 2023 Dataset](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023)
+
+- **Components & Architecture:**
+    - **`items.py`: Data Cleaning & Prompt Construction**  
+        - Implements the `Item` class to parse raw product data (title, features, description, details).
+        - Cleans noisy text, removes irrelevant part numbers, enforces token/character thresholds.
+        - Constructs supervised training prompts for price prediction (both with and without ground truth labels for training vs. testing).
+    - **`loaders.py`: High-Performance Data Loader**  
+        - Implements `ItemLoader` class for parallelized dataset loading using multiprocessing.
+        - Efficiently filters millions of datapoints into high-quality curated samples.
+    - **`Day24.py`: Dataset Sampling, Balancing & Packaging**  
+        - Combines multiple product categories, balances price distributions, reduces overrepresented categories (e.g., Automotive).
+        - Visualizes dataset characteristics (token counts, prices, category distribution).
+        - Splits data into train/test sets, pushes datasets to Hugging Face Hub, and pickles data for local reuse.
+
+- **Highlights:**  
+    - Complete real-world data preparation flow tailored for fine-tuning large language models.
+    - Emphasizes robust cleaning, smart sampling, and efficient scaling for LLM-compatible training.
+    - Demonstrates important LLM engineering principles: **data curation, prompt generation, dataset balancing, and infrastructure readiness**.
+---
+### **Day 25**
+
