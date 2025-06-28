@@ -346,6 +346,7 @@ def get_text_length(item):
 def is_top_electronics_brand(item):
     """ Checks if the item's brand is one of the top electronics brands. """
     brand = item.features.get("Brand")
+    # Manually define a list of top electronics brands
     top_brands = ["hp", "dell", "lenovo", "samsung", "asus", "sony", "canon", "apple", "intel"]
     return brand and brand.lower() in top_brands
 
@@ -389,9 +390,23 @@ def linear_regression_pricer(item):
 Tester.test(linear_regression_pricer)
 
 # ------------------------------------ Bag-of-Words + Linear Regression ----------------------------------
+# Bag-of-Words (BoW) is a simple text representation technique that converts text into a matrix of token counts.
+# It counts the frequency of each word in the text, ignoring grammar and word order.
+# This allows us to create a numerical representation of text data that can be used in machine learning models.
+# In this code, we use BoW to convert the item descriptions into a matrix of word counts,
+# which we then use as features for a linear regression model to predict prices.
+# We use the CountVectorizer from scikit-learn to create the BoW representation.
+# We limit the vocabulary to the top 1000 words and remove common English stop words.
+# This helps reduce noise and focuses on the most relevant words for price prediction.
+# The resulting matrix is then used to train a linear regression model to predict item prices based on their descriptions.
+
+# Our documents are the test prompts from the training set, and we will use these to create a Bag-of-Words representation.
 documents = [item.test_prompt() for item in train]
+
+# Extract prices from the training set to use as target values for regression
 prices = np.array([item.price for item in train])
 
+# Create a Bag-of-Words representation of the documents using CountVectorizer
 vectorizer = CountVectorizer(max_features=1000, stop_words='english')
 X_bow = vectorizer.fit_transform(documents)
 regressor = LinearRegression().fit(X_bow, prices)
@@ -404,6 +419,14 @@ Tester.test(bow_lr_pricer)
 
 # ------------------------------------ Word2Vec Embeddings + Linear Regression ----------------------------------
 processed_docs = [simple_preprocess(doc) for doc in documents]
+
+# Build vector with 400 dimensions, using a window size of 5 and minimum word count of 1
+# This means we will create word vectors for all words in the documents, even if they appear only once.
+# The window size of 5 means that the model will consider a context of 5 words on either side of the target word.
+# The vector size of 400 means that each word will be represented by a 400-dimensional vector.
+# The workers parameter allows us to use multiple CPU cores for training the model, speeding up the process.
+# The Word2Vec model will learn word embeddings from the processed documents.
+# These embeddings capture semantic relationships between words based on their context
 w2v_model = Word2Vec(sentences=processed_docs, vector_size=400, window=5, min_count=1, workers=8)
 
 def document_vector(doc):
@@ -420,6 +443,13 @@ def word2vec_lr_pricer(item):
 Tester.test(word2vec_lr_pricer)
 
 # ------------------------------------ SVM Regression on Word2Vec ----------------------------------
+# Support Vector Regression (SVR) is a type of Support Vector Machine (SVM) that is used for regression tasks.
+# It works by finding a hyperplane that best fits the data points in a high-dimensional space
+# In this code, we use the Word2Vec embeddings as features for the SVR model.
+# The Word2Vec embeddings are dense vector representations of the item descriptions, capturing semantic relationships.
+# We use the LinearSVR implementation from scikit-learn, which is a linear support vector regression model.
+# The model is trained on the Word2Vec embeddings of the training set,
+# and then we can use it to predict prices for new items based on their descriptions.
 svr_model = LinearSVR().fit(X_w2v, prices)
 
 def svr_pricer(item):
@@ -429,6 +459,8 @@ def svr_pricer(item):
 Tester.test(svr_pricer)
 
 # ------------------------------------ Random Forest Regression on Word2Vec ----------------------------------
+# Random Forest Regression is an ensemble learning method that uses multiple decision trees to make predictions.
+# It works by training multiple decision trees on different subsets of the data and averaging their predictions.
 rf_model = RandomForestRegressor(n_estimators=100, random_state=42, n_jobs=8).fit(X_w2v, prices)
 
 def random_forest_pricer(item):
