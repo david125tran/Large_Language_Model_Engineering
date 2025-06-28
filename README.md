@@ -300,4 +300,22 @@ Here's a peek into the evolving projects and concepts within this repository:
 
 - **Outcome:** Multiple price predictors benchmarked on real-world data; sets the stage for LLM fine-tuning by comparing classical models to potential LLM performance.
 ---
+### **Day 26: Human-in-the-Loop Price Evaluation** 🧠📈
 
+**Objective:**  
+Simulate human judgment in price estimation and use it as a baseline to compare against LLM predictions.
+
+**What This Script Does:**
+- 📤 **Exports prompts** to `human_input.csv` for manual price estimation by a human reviewer  
+- 🧾 **Reads human guesses** from `human_output.csv`  
+- 📊 **Evaluates human predictions** against ground truth prices using a custom `Tester` class  
+- 🤖 **Benchmarks LLMs** (e.g., GPT-4o-mini, Frontier) against the same test set using carefully engineered prompts  
+- 🧠 **Normalizes outputs** with a `get_price()` parser to extract price from LLM responses
+
+**Key Concepts Demonstrated:**
+- Human-in-the-loop (HITL) evaluation without ground truth labeling
+- Prompt formatting for price prediction
+- Multi-model comparison using a shared evaluation framework
+
+
+---
