@@ -281,5 +281,23 @@ Here's a peek into the evolving projects and concepts within this repository:
     - Emphasizes robust cleaning, smart sampling, and efficient scaling for LLM-compatible training.
     - Demonstrates important LLM engineering principles: **data curation, prompt generation, dataset balancing, and infrastructure readiness**.
 ---
-### **Day 25**
+### **Day 25: Price Prediction with ML & Embeddings** 💸🤖
+
+- **Objective:** Build a full ML pipeline to estimate product prices using structured features and text embeddings—laying groundwork for LLM fine-tuning.
+
+- **Data:** Pre-curated Amazon product data (`train.pkl`, `test.pkl`) from Day 24.
+
+- **Models Used:**
+  - 🎯 **Baselines:** Random and constant price predictors.
+  - 📈 **ML Models:** Linear Regression, Support Vector Regression, Random Forest.
+  - 📚 **NLP Features:**
+    - Bag-of-Words (BoW) + Regression
+    - Word2Vec Embeddings + Regression/SVM/Random Forest
+
+- **Tools & Techniques:**
+  - Feature engineering from metadata (e.g., weight, rank, brand).
+  - Custom evaluation class with RMSLE metric, error heatmaps, and scatter plots.
+
+- **Outcome:** Multiple price predictors benchmarked on real-world data; sets the stage for LLM fine-tuning by comparing classical models to potential LLM performance.
+---
 
