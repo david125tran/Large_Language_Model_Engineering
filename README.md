@@ -316,6 +316,27 @@ Simulate human judgment in price estimation and use it as a baseline to compare 
 - Human-in-the-loop (HITL) evaluation without ground truth labeling
 - Prompt formatting for price prediction
 - Multi-model comparison using a shared evaluation framework
-
-
 ---
+### 🔧 Day 27: Fine-Tuning GPT for Price Estimation
+
+This project fine-tunes an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product prices from structured item descriptions**. It uses OpenAI’s supervised fine-tuning API and integrates with **Weights & Biases** (`wandb`) for experiment tracking.
+
+#### 🛠️ Workflow
+1. **Data Prep**  
+   - Load `Item` objects from `.pkl` files (each with description + price).  
+   - Convert them into OpenAI's required `JSONL` chat format (`system`, `user`, `assistant` roles).
+2. **Model Training**  
+   - Upload training & validation files to OpenAI.
+   - Launch fine-tuning job (with `wandb` integration for logging).
+3. **Model Evaluation**  
+   - Wait for the fine-tuned model.
+   - Run predictions on held-out test set.
+   - Compare predicted vs actual prices using a custom `Tester` class.
+- **Highlights:**  
+- ✅ Removes the need for long system prompts at inference time.
+- ✅ Makes predictions fast and cheap with minimal input.
+- ✅ Integrated with `wandb` for tracking training loss, job status, and hyperparameters.
+---
+
+
+
