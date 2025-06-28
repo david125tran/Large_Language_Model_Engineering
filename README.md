@@ -317,9 +317,9 @@ Simulate human judgment in price estimation and use it as a baseline to compare 
 - Prompt formatting for price prediction
 - Multi-model comparison using a shared evaluation framework
 ---
-### 🔧 Day 27: Fine-Tuning GPT for Price Estimation
-
-This project fine-tunes an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product prices from structured item descriptions**. It uses OpenAI’s supervised fine-tuning API and integrates with **Weights & Biases** (`wandb`) for experiment tracking.
+### **Day 27: Fine-Tuning GPT for Price Estimation** 🔧
+**Objective:** 
+Fine-tune an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product prices from structured item descriptions**. It uses OpenAI’s supervised fine-tuning API and integrates with **Weights & Biases** (`wandb`) for experiment tracking.
 
 #### 🛠️ Workflow
 1. **Data Prep**  
