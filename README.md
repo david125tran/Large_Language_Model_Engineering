@@ -340,6 +340,53 @@ Fine-tune an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product pr
 Below is a visualization of the training run using Weights & Biases. The model shows a rapid decrease in loss and a strong rise in accuracy, demonstrating effective learning within the first 200 steps.
 ![Training Loss and Accuracy](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day27/Training%20Metrics%20Visualization.png)
 ---
+# 📅 Day 28: PEFT - LoRA, QLoRA, & Hyperparameters
+
+## 🧠 Mastering Parameter-Efficient Fine-Tuning (PEFT)
+
+### 🔧 LoRA (Low-Rank Adaptation)
+
+- ✔ **Problem**: LLMs have billions of parameters, making them expensive to fine-tune.  
+- ✔ **Solution**: Add small trainable matrices (adapters) while freezing base model weights.
+  - Only train these adapters — greatly reduces trainable parameters
+  - Compatible with any transformer model
+- ✔ **How it works**: Decomposes weight updates into low-rank matrices (A & B)
+### ⚙️ QLoRA (Quantized LoRA)
+- ✔ **Problem**: Fine-tuning large models requires huge memory/compute.
+- ✔ **Solution**: QLoRA combines:
+  1. 🧮 Quantization (e.g., 16-bit → 4-bit = ~75% memory reduction)
+  2. 🧩 LoRA adapters for lightweight fine-tuning on consumer GPUs
+- ✔ **How it works**:
+  - Load base model with reduced precision (quantized)
+  - Freeze model weights
+  - Train full-precision LoRA adapters
+  - Note: Base is quantized, but adapters use 32-bit precision
+### 🔬 Hyperparameters (QLoRA/LoRA-specific)
+
+- ✔ **Problem**: Need careful tuning to avoid over/underfitting
+
+- ✔ **Solution**: These settings guide training behavior (not model architecture)
+
+- ✔ **Key Hyperparameters**:
+  - `r`: 🧮 Rank/dimension of adapter matrices (e.g., 5, 8, 16)
+  - `lora_alpha`: 🔧 Scaling factor for updates (e.g., 16, 32, 64)
+  - `lora_dropout`: 🎲 Dropout for regularization (e.g., 0.05, 0.1)
+  - `target_modules`: 🎯 Layers to inject LoRA into (e.g., `q_proj`, `v_proj`)
+  - `bias`: ⚖️ Bias handling (e.g., `"none"`, `"lora_only"`, `"all"`)
+### ✅ PEFT Benefits
+
+- 💡 Scales down memory and compute requirements
+- 💻 Makes large LLM tuning feasible on mid-tier GPUs
+- 🔬 Ideal for custom, domain-specific fine-tuning (e.g., LCMS lab data)
+### 📊 Summary Table
+
+| **Concept**         | **What It Does**                                 | **Relationship**                          |
+|---------------------|--------------------------------------------------|-------------------------------------------|
+| 🧠 **PEFT**         | Efficient fine-tuning strategy                   | LoRA and QLoRA are PEFT methods           |
+| 🧩 **LoRA**         | Adds small adapter matrices (A & B)              | A specific PEFT method                    |
+| 🧮 **QLoRA**        | LoRA + 4-bit quantized base model                | A memory-efficient extension of LoRA      |
+| ⚙️ **Hyperparameters** | Control training behavior                         | Used in both LoRA & QLoRA setups           |
+---
 
 
 
