@@ -2,7 +2,7 @@
 
 ### Exploring the Frontier of AI & Crafting Unique Solutions
 
-This repository chronicles my hands-on adventure into Large Language Model (LLM) engineering. While I'm coding along with an online course, I'm deliberately diverging to infuse my own creative twists and explore practical, real-world applications. Expect to see custom integrations, unique AI interactions, and a focus on getting my hands dirty with powerful language models.
+This repository is my hands-on adventure into Large Language Model (LLM) engineering. Here, I am playing with custom integrations, unique AI interactions, and a focus on working with powerful language models.
 
 
 ## 🚀 **My LLM Explorations (By Day)**
