@@ -413,7 +413,7 @@ Below is a visualization of the training run using Weights & Biases. The model s
   - No training or fine-tuning was performed
   - Model performance can likely be **greatly improved with LoRA fine-tuning**
 ---
-## **Day 30: Fine-Tuning a Base Model 🧠**
+### **Day 30: Fine-Tuning a Base Model 🧠**
 - **Objective (A Continuation of Day 29)**
 
   - Fine-tuning the same LLaMA 3.1 8B base model using the **QLoRA** method, a parameter-efficient tuning approach ideal for large models on limited hardware.
