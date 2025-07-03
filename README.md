@@ -340,7 +340,7 @@ Fine-tune an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product pr
 Below is a visualization of the training run using Weights & Biases. The model shows a rapid decrease in loss and a strong rise in accuracy, demonstrating effective learning within the first 200 steps.
 ![Training Loss and Accuracy](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day27/Training%20Metrics%20Visualization.png)
 ---
-## **Day 28: PEFT - LoRA, QLoRA, & Hyperparameters ⚙️** 
+### **Day 28: PEFT - LoRA, QLoRA, & Hyperparameters ⚙️** 
 🧠 Mastering Parameter-Efficient Fine-Tuning (PEFT)
 
 - 🔧 **LoRA (Low-Rank Adaptation)**
@@ -386,35 +386,32 @@ Below is a visualization of the training run using Weights & Biases. The model s
 | 🧮 **QLoRA**        | LoRA + 4-bit quantized base model                | A memory-efficient extension of LoRA      |
 | ⚙️ **Hyperparameters** | Control training behavior                         | Used in both LoRA & QLoRA setups           |
 ---
-## 📅 Day 29 – LLM Price Prediction Inference
+### 📅 Day 29 – LLM Price Prediction Inference
 
-### 🧠 Goal
-Run inference with a quantized pretrained LLaMA 3.1-8B model to predict prices from product descriptions and evaluate its accuracy using a test dataset.
+- **🧠 Goal**
+  - Run inference with a quantized pretrained LLaMA 3.1-8B model to predict prices from product descriptions and evaluate its accuracy using a test dataset.
 
-### ✅ What Was Done
+- **✅ What Was Done**
+  - Loaded the **LLaMA 3.1-8B** model using 4-bit quantization (`BitsAndBytesConfig`) for efficient GPU memory use.
+  - Loaded the **`pricer-data`** dataset from Hugging Face:
+    - `text`: product description (e.g., car parts, A/C kits)
+    - `price`: ground truth numeric value
+  - Defined a function `model_predict()` to:
+    - Run the prompt through the LLM
+    - Generate a short text response
+    - Extract a predicted price using regex
+  - Use a lightweight `Tester` class to:
+    - Evaluate model performance across test samples
+    - Compute **absolute error**, **RMSLE**, and **color-coded accuracy**
+    - Visualize results via scatter plots
 
-- Loaded the **LLaMA 3.1-8B** model using 4-bit quantization (`BitsAndBytesConfig`) for efficient GPU memory use.
-- Loaded the **`pricer-data`** dataset from Hugging Face:
-  - `text`: product description (e.g., car parts, A/C kits)
-  - `price`: ground truth numeric value
-- Defined a function `model_predict()` to:
-  - Run the prompt through the LLM
-  - Generate a short text response
-  - Extract a predicted price using regex
-- Use a lightweight `Tester` class to:
-  - Evaluate model performance across test samples
-  - Compute **absolute error**, **RMSLE**, and **color-coded accuracy**
-  - Visualize results via scatter plots
+- **📉 Observations**
+  - The model was **not fine-tuned** on domain-specific price data — this is zero-shot inference.
+  - Despite that, it was able to extract **numerically reasonable guesses** from structured prompts.
 
-### 📉 Observations
-
-- The model was **not fine-tuned** on domain-specific price data — this is zero-shot inference.
-- Despite that, it was able to extract **numerically reasonable guesses** from structured prompts.
-
-### 🚫 What’s Missing (Planned for Day 30)
-
-- No training or fine-tuning was performed
-- Model performance can likely be **greatly improved with LoRA fine-tuning**
+- **🚫 What’s Missing (Planned for Day 30)**
+  - No training or fine-tuning was performed
+  - Model performance can likely be **greatly improved with LoRA fine-tuning**
 ---
 ## **Day 30: Fine-Tuning a Base Model 🧠**
 - **Objective (A Continuation of Day 29)**
