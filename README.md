@@ -338,7 +338,7 @@ Fine-tune an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product pr
 - ✅ Integrated with `wandb` for tracking training loss, job status, and hyperparameters.
 - **Fine-Tuning Performance (WandB) 📉**
 Below is a visualization of the training run using Weights & Biases. The model shows a rapid decrease in loss and a strong rise in accuracy, demonstrating effective learning within the first 200 steps.
-![Training Loss and Accuracy](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day27/Training%Metrics%Visualization.png)
+![Training Loss and Accuracy](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day27/Training%20Metrics%20Visualization.png)
 ---
 
 
