@@ -340,45 +340,44 @@ Fine-tune an OpenAI GPT model (`gpt-4o-mini-2024-07-18`) to **predict product pr
 Below is a visualization of the training run using Weights & Biases. The model shows a rapid decrease in loss and a strong rise in accuracy, demonstrating effective learning within the first 200 steps.
 ![Training Loss and Accuracy](https://github.com/david125tran/Large_Language_Model_Engineering/blob/main/Day27/Training%20Metrics%20Visualization.png)
 ---
-# 📅 Day 28: PEFT - LoRA, QLoRA, & Hyperparameters
+## **Day 28: PEFT - LoRA, QLoRA, & Hyperparameters ⚙️** 
+🧠 Mastering Parameter-Efficient Fine-Tuning (PEFT)
 
-## 🧠 Mastering Parameter-Efficient Fine-Tuning (PEFT)
+- 🔧 **LoRA (Low-Rank Adaptation)**
+  - **Problem**: LLMs have billions of parameters, making them expensive to fine-tune.  
+  - **Solution**: Add small trainable matrices (adapters) while freezing base model weights.
+    - Only train these adapters — greatly reduces trainable parameters
+    - Compatible with any transformer model
+  - **How it works**: Decomposes weight updates into low-rank matrices (A & B)
 
-### 🔧 LoRA (Low-Rank Adaptation)
+- ⚙️ **QLoRA (Quantized LoRA)**
+  - **Problem**: Fine-tuning large models requires huge memory/compute.
+  - **Solution**: QLoRA combines:
+    - 🧮 Quantization (e.g., 16-bit → 4-bit = ~75% memory reduction)
+    - 🧩 LoRA adapters for lightweight fine-tuning on consumer GPUs
+  - **How it works**:
+    - Load base model with reduced precision (quantized)
+    - Freeze model weights
+    - Train full-precision LoRA adapters
+    - Note: Base is quantized, but adapters use 32-bit precision
 
-- ✔ **Problem**: LLMs have billions of parameters, making them expensive to fine-tune.  
-- ✔ **Solution**: Add small trainable matrices (adapters) while freezing base model weights.
-  - Only train these adapters — greatly reduces trainable parameters
-  - Compatible with any transformer model
-- ✔ **How it works**: Decomposes weight updates into low-rank matrices (A & B)
-### ⚙️ QLoRA (Quantized LoRA)
-- ✔ **Problem**: Fine-tuning large models requires huge memory/compute.
-- ✔ **Solution**: QLoRA combines:
-  1. 🧮 Quantization (e.g., 16-bit → 4-bit = ~75% memory reduction)
-  2. 🧩 LoRA adapters for lightweight fine-tuning on consumer GPUs
-- ✔ **How it works**:
-  - Load base model with reduced precision (quantized)
-  - Freeze model weights
-  - Train full-precision LoRA adapters
-  - Note: Base is quantized, but adapters use 32-bit precision
-### 🔬 Hyperparameters (QLoRA/LoRA-specific)
+- 🔬 **Hyperparameters (QLoRA/LoRA-specific)**
 
-- ✔ **Problem**: Need careful tuning to avoid over/underfitting
+  - **Problem**: Need careful tuning to avoid over/underfitting
+  - **Solution**: These settings guide training behavior (not model architecture)
+  - **Key Hyperparameters**:
+    - `r`: 🧮 Rank/dimension of adapter matrices (e.g., 5, 8, 16)
+    - `lora_alpha`: 🔧 Scaling factor for updates (e.g., 16, 32, 64)
+    - `lora_dropout`: 🎲 Dropout for regularization (e.g., 0.05, 0.1)
+    - `target_modules`: 🎯 Layers to inject LoRA into (e.g., `q_proj`, `v_proj`)
+    - `bias`: ⚖️ Bias handling (e.g., `"none"`, `"lora_only"`, `"all"`)
 
-- ✔ **Solution**: These settings guide training behavior (not model architecture)
+- ✅ **PEFT Benefits**
+  - 💡 Scales down memory and compute requirements
+  - 💻 Makes large LLM tuning feasible on mid-tier GPUs
+  - 🔬 Ideal for custom, domain-specific fine-tuning
 
-- ✔ **Key Hyperparameters**:
-  - `r`: 🧮 Rank/dimension of adapter matrices (e.g., 5, 8, 16)
-  - `lora_alpha`: 🔧 Scaling factor for updates (e.g., 16, 32, 64)
-  - `lora_dropout`: 🎲 Dropout for regularization (e.g., 0.05, 0.1)
-  - `target_modules`: 🎯 Layers to inject LoRA into (e.g., `q_proj`, `v_proj`)
-  - `bias`: ⚖️ Bias handling (e.g., `"none"`, `"lora_only"`, `"all"`)
-### ✅ PEFT Benefits
-
-- 💡 Scales down memory and compute requirements
-- 💻 Makes large LLM tuning feasible on mid-tier GPUs
-- 🔬 Ideal for custom, domain-specific fine-tuning (e.g., LCMS lab data)
-### 📊 Summary Table
+- 📊 **Summary Table**
 
 | **Concept**         | **What It Does**                                 | **Relationship**                          |
 |---------------------|--------------------------------------------------|-------------------------------------------|
@@ -417,5 +416,15 @@ Run inference with a quantized pretrained LLaMA 3.1-8B model to predict prices f
 - No training or fine-tuning was performed
 - Model performance can likely be **greatly improved with LoRA fine-tuning**
 ---
+## **Day 30: Fine-Tuning a Base Model 🧠**
+- **Objective (A Continuation of Day 29)**
 
-
+  - Fine-tuning the same LLaMA 3.1 8B base model using the **QLoRA** method, a parameter-efficient tuning approach ideal for large models on limited hardware.
+  - Applied supervised fine-tuning (SFT) using the `trl` library from Hugging Face.
+  - Configured training hyperparameters including LoRA rank, dropout, batch size, learning rate, and cosine scheduling.
+  - Pushed the fine-tuned model to the Hugging Face Hub under our own namespace for easy reuse.
+  - This transition from Day 29 → Day 30 marks the shift from **prompt engineering and evaluation** to **custom model training and adaptation**, making the model significantly better at our specific use case.
+- **Highlights**
+  - Most base models perform poorly on niche tasks without fine-tuning. By training on just a few thousand examples, we can make an open-source LLM perform similarly to commercial models for a very narrow domain (e.g. pricing predictions from LCMS data).
+  - The end goal: **own a lightweight, domain-specialized LLM that runs locally, for free, without throttling** – and can scale as more data is collected.
+---
