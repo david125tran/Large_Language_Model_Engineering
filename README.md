@@ -452,6 +452,36 @@ Below is a visualization of the training run using Weights & Biases. The model s
   - **Test**: 2,000 examples with masked prices for evaluation
     
 - **Published to Hugging Face Hub**: [`david125tran/lite-data`](https://huggingface.co/datasets/david125tran/lite-data)
-
 ---
+### Day 32 – Fine-Tuning LLaMA on a Curated Dataset 📅
+
+The main objective today is to **fine-tune a pretrained LLaMA model** on the simplified dataset prepared in Day 31.
+
+Key steps include:
+
+- Loading the pickled training and test sets.
+- Formatting the data for model training (text → price).
+- Initializing and configuring a pretrained language model with regression capability.
+- Running the fine-tuning loop over the 25k training items.
+- Evaluating performance against the held-out 2k test items.
+
+**🧠 Why This Matters**
+
+Fine-tuning on a smaller, well-structured dataset:
+- Reduces training time and complexity
+- Helps validate model readiness before scaling up
+- Provides a lightweight, cost-effective environment for experimentation
+
+This approach is especially useful when you want to:
+- Prototype model behavior on specific domains
+- Avoid overfitting to noisy or overly broad datasets
+- Create task-specific models (e.g. text-to-price prediction)
+
+**✅ Outcomes**
+
+- A fine-tuned model trained on realistic product descriptions and pricing.
+- Evaluation results showing model performance on unseen test data.
+- A working pipeline for further experiments or deployment via Hugging Face.
+---
+
 
