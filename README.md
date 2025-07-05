@@ -483,5 +483,18 @@ This approach is especially useful when you want to:
 - Evaluation results showing model performance on unseen test data.
 - A working pipeline for further experiments or deployment via Hugging Face.
 ---
+### 📅 Day 33 – Inference with the Fine-Tuned LLaMA Model 🔍💰
 
+- **Objective:** Run full evaluation using the [LoRA fine-tuned LLaMA model](https://huggingface.co/david125tran/lite-data-2025-07-05_16.26.10) from Day 32 to predict product prices, assess performance, and visualize results.
+
+- **What This Script Does:**
+  - Loads the fine-tuned model (`lite-data-2025-07-05_16.26.10`) from Hugging Face.
+  - Generates price predictions from structured product prompts using `model.generate()`.
+  - Computes detailed performance metrics like **mean error**, **RMSLE**, and **accuracy** using a custom `Tester` class.
+  - Plots a visual comparison between ground truth and predicted prices with color-coded error heatmaps.
+
+- **Highlights:**
+  - Achieved strong price prediction accuracy (**90.4% hit rate**, **RMSLE = 0.44**, **avg. error ≈ $18.93**) on the Appliance test set.
+  - Demonstrates the power of **domain-specific fine-tuning** on small, curated datasets using LoRA and 4-bit quantization.
+  - Outperforms GPT-4 on this specialized task — a major win for open-source, efficient models!
 
