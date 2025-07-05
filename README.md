@@ -425,3 +425,35 @@ Below is a visualization of the training run using Weights & Biases. The model s
   - Most base models perform poorly on niche tasks without fine-tuning. By training on just a few thousand examples, we can make an open-source LLM perform similarly to commercial models for a very narrow domain (e.g. pricing predictions from LCMS data).
   - The end goal: **own a lightweight, domain-specialized LLM that runs locally, for free, without throttling** – and can scale as more data is collected.
 ---
+### 📆 Day 31: Lightweight Dataset for LLM Price Prediction (Follow-Up to Day 24)
+
+**Day 31** is a focused continuation of the full-scale pipeline built in **Day 24**. While Day 24 emphasized large-scale data curation across multiple product categories (over 2.8M items), Day 31 zooms in on a **single category (Appliances)** to create a **lighter, more manageable dataset** for experimentation and model iteration.
+
+---
+
+**🔁 Relationship to Day 24**
+
+| Feature              | Day 24                                | Day 31                                      |
+|----------------------|----------------------------------------|---------------------------------------------|
+| Data Scope           | 8 categories (2.8M+ datapoints)        | 1 category (Appliances, ~28k datapoints)    |
+| Focus                | Full curation pipeline & balancing     | Quick iterations with high-quality subset   |
+| Sampling Strategy    | Stratified price/category balancing    | Direct filtering + quality thresholding     |
+| Dataset Output       | `pricer-data` (400k train)             | `lite-data` (25k train)                     |
+| Use Case             | Full-scale fine-tuning                 | Lightweight fine-tuning / prototyping       |
+
+---
+
+**📦 Dataset Highlights**
+
+- **Source**: [Amazon Reviews 2023 - Appliances](https://huggingface.co/datasets/McAuley-Lab/Amazon)
+- **Filtering Criteria**:
+  - Token length (`>150`)
+  - Character length (`>300`)
+  - Price bounds (`$0.50 – $999.49`)
+- **Outputs**:
+  - **Train**: 25,000 high-quality examples with ground truth prices
+  - **Test**: 2,000 examples with masked prices for evaluation
+- **Published to Hugging Face Hub**: [`david125tran/lite-data`](https://huggingface.co/datasets/david125tran/lite-data)
+
+---
+
